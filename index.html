@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <title>Тестовое</title>
+</head>
+<body>
+    <div class="container">
+        <section class="survey">
+            <h3>Сколько денег вы откладываете в месяц?</h3>
+            <p>Ответьте и узнаете, сколько копят другие.</p>
+            <form id="sliderForm">             
+                <div class="survey__output-container">
+                    <output for="flying" name="sliderValue">0 ₽</output>
+                </div>
+                <div class="survey__input-container">
+                    <span class="survey__number-value">0 ₽</span>
+                    <input name="slider" id="flying" type="range" min="0" max="50000" value="0" step="10" class="survey__slider">             
+                    <span class="survey__number-value">50 000 ₽</span>
+                </div>
+            </form>
+        </section>
+        <section class="final-display" id="finalDisplay">
+            <h3>Вы откладываете <span id="resultValue"></span> ₽ в месяц. <br>
+                За три года вы бы заработали:</h3>
+            <div class="final-display__results">              
+                <div class="final-display__result">
+                    <div class="final-display__popup-message" hidden>
+                        В этом мало смысла — такие накопления «съедает» инфляция
+                    </div>
+                    <div class="money"></div>
+                    <span class="result"></span>
+                    <p>если откладывать под матрас
+                        <span class="final-display__popup-button">?</span>
+                    </p>
+                </div>
+
+                <div class="final-display__result">
+                    <div class="final-display__popup-message" hidden>
+                        Ставки по вкладам различны в разных банках и зависят от многих факторов, в частности, от ключевой ставки Центрального банка РФ<sup><a href="https://vc.ru/promo/76505-alfa-kapital-yuridicheskaya-informaciya?ea=678fa71362d1b64dda32a1e6c54730abd442d756633f11fa1548bfcc17e7bfb5#1">1</a></sup>.
+                    </div>
+                    <div class="money"></div>
+                    <span class="result"></span>
+                    <p>если откладывать на депозит
+                        <span class="final-display__popup-button">?</span>
+                    </p>
+                </div>
+
+                <div class="final-display__result">
+                    <div class="final-display__popup-message aligned" hidden>
+                        Вы становитесь инвестором набора компаний, который определяют профессиональные управляющие. Они решают, когда покупатьи продавать ценные бумаги, чтобыобеспечить инвестиционный доход. Купить или продать паи фонда можнов любой момент<sup><a href="https://vc.ru/promo/76505-alfa-kapital-yuridicheskaya-informaciya?ea=678fa71362d1b64dda32a1e6c54730abd442d756633f11fa1548bfcc17e7bfb5#2">2</a></sup>.
+                    </div>
+                    <div class="money"></div>
+                    <span class="result"></span>
+                    <p>если инвестировать в ПИФ «Альфа-Капитала»
+                        <span class="final-display__popup-button">?</span>
+                    </p>    
+                </div>
+            </div>
+        </section>
+        <details class="statistics">
+            <summary class="statistics__intro"><h4>А как в среднем у читателей vc.ru?</h4></summary>
+            <section class="statistics__info" id="info">
+                <div class="statistics__average">
+                    <div class="statistics__money-icons">
+                        <img src="./src/img/money1.png" alt="Coin" class="statistics__money-icon1">
+                        <img src="./src/img/money2.png" alt="Coin" class="statistics__money-icon2">
+                    </div>
+                    <p>~ 15 240 ₽</p>
+                </div>
+                <p>в среднем откладывают читатели vc.ru</p>
+
+                <div class="statistics__others">
+                    <div class="statistics__other">
+                        <div class="statistics__picture">
+                            <img src="./src/img/circle.png" alt="circle" class="statistics__circle">
+                            <img src="./src/img/ellipse.png" alt="circle" class="statistics__ellipse">
+                        </div>
+                        <p class="statistics__percent">50%</p>
+                        <p>читателей откладывают больше 1000 ₽ в месяц</p>
+                    </div>
+                    <div class="statistics__other">
+                        <div class="statistics__picture">
+                            <img src="./src/img/circle.png" alt="circle" class="statistics__circle">
+                            <img src="./src/img/ellipse1.png" alt="circle" class="statistics__ellipse1">
+                        </div>
+                        <p class="statistics__percent">7%</p>
+                        <p>читателей откладывают больше 10 000 ₽ в месяц</p>
+                    </div>
+                </div>
+            </section>
+            <summary class="statistics__intro"><h4>Свернуть</h4></summary>
+        </details>
+        <section class="outro">
+            <h4>Как начать инвестировать?</h4>
+            <a href="https://alfabank.ru/make-money/investments/">Узнать</a>
+        </section>
+    </div>
+    
+    <script src="./dist/bundle.js"></script>
+</body>
+</html>

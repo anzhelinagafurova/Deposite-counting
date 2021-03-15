@@ -5,12 +5,12 @@
   text-align: center;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 * {
   font-family: "Roboto", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 h3 {
@@ -41,22 +41,39 @@ p {
 .survey__input-container .survey__slider {
   -webkit-appearance: none;
   appearance: none;
-  flex-grow: 1;
   height: 9px;
+  flex-grow: 1;
   background: #E2E2E2;
-  outline: none;
   border-radius: 5px;
   margin: 0px 10px;
+  outline: none;
 }
-.survey__input-container .survey__slider::-webkit-slider-thumb {
-  overflow: visible;
-  -webkit-appearance: none;
-  appearance: none;
-  border: 0;
-  cursor: pointer;
+.survey__input-container .survey__slider::-moz-range-thumb {
   height: 25px;
   width: 25px;
+  -webkit-appearance: none;
+  appearance: none;
   background: url("../img/slider.png");
+  border: 0;
+  cursor: pointer;
+}
+.survey__input-container .survey__slider::-ms-thumb {
+  height: 25px;
+  width: 25px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: url("../img/slider.png");
+  border: 0;
+  cursor: pointer;
+}
+.survey__input-container .survey__slider::-webkit-slider-thumb {
+  height: 25px;
+  width: 25px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: url("../img/slider.png");
+  border: 0;
+  cursor: pointer;
 }
 .survey__input-container .survey__number-value {
   font-size: 18px;
@@ -69,17 +86,15 @@ p {
 }
 
 output {
-  background: #FE4D4A;
   display: block;
-  padding: 5px;
-  width: -webkit-max-content;
-  width: max-content;
-  text-align: center;
+  width: 65px;
+  position: relative;
+  background: #FE4D4A;
   border-radius: 5px;
   color: white;
+  text-align: center;
   font-weight: 500;
-  position: relative;
-  width: 65px;
+  padding: 5px;
 }
 
 .final-display {
@@ -97,9 +112,9 @@ output {
 }
 .final-display .final-display__results .final-display__result .money {
   height: 56px;
-  margin: 20px 0px;
   display: flex;
   justify-content: center;
+  margin: 20px 0px;
 }
 .final-display .final-display__results .final-display__result .money img:not(:first-child) {
   margin-left: -40px;
@@ -110,6 +125,8 @@ output {
 }
 .final-display .final-display__results .final-display__result .final-display__popup-button {
   display: inline-block;
+  height: 20px;
+  width: 20px;
   text-align: center;
   color: #FE4D4A;
   font-size: 13px;
@@ -117,15 +134,12 @@ output {
   line-height: 1.5;
   background: #FEEBEF;
   border-radius: 10px;
-  height: 20px;
-  width: 20px;
   margin: 0px 5px;
   cursor: pointer;
 }
 
 .final-display__popup-message {
   position: absolute;
-  z-index: 999;
   background: #FC5A57;
   color: white;
   padding: 15px;
